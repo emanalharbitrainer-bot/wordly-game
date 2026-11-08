@@ -1,0 +1,586 @@
+/* WORDLY 3.0 — league, groups, archive, packs, speed, tutorial, share card, seasons. */
+
+/* ───────── small shared bits ───────── */
+.hard-badge {
+  display: inline-block;
+  margin-inline-start: 6px;
+  padding: 1px 8px;
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--danger) 16%, transparent);
+  color: var(--danger);
+  font-size: 11px;
+  font-weight: 800;
+  vertical-align: middle;
+}
+.league-pill {
+  color: var(--ink);
+  font-weight: 700;
+  background: color-mix(in srgb, var(--gold) 22%, var(--surface));
+}
+.skip-btn {
+  padding: 8px 12px;
+  border-radius: var(--r-pill);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-2);
+  background: var(--surface-2);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+.skip-btn:disabled {
+  opacity: 0.5;
+}
+.switch {
+  flex: none;
+  width: 50px;
+  height: 30px;
+  border-radius: 999px;
+  padding: 3px;
+  background: var(--line-strong);
+  display: flex;
+  justify-content: flex-start;
+  transition: background 220ms;
+}
+.switch.is-on {
+  background: var(--danger);
+  justify-content: flex-end;
+}
+.switch i {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.switch:disabled {
+  opacity: 0.5;
+}
+.hard-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ───────── menu ───────── */
+.modes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.mode-tile {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 4px;
+  min-height: 86px;
+  padding: 12px 4px;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm), inset 0 0 0 1px var(--line);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--ink);
+}
+.mode-tile__icon {
+  font-size: 26px;
+  line-height: 1;
+}
+.mode-tile__meta {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.mode-tile__new {
+  position: absolute;
+  top: -7px;
+  inset-inline-end: -4px;
+  padding: 1px 7px;
+  border-radius: var(--r-pill);
+  background: var(--danger);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+}
+.season-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: var(--r-lg);
+  background: linear-gradient(135deg, var(--season-a, var(--accent)), var(--season-b, var(--gold)));
+  color: #fff;
+  font-size: 15px;
+}
+.season-banner > span:first-child {
+  font-size: 22px;
+}
+.season-banner__btn {
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+}
+.choice--tutorial {
+  box-shadow: var(--shadow-sm), inset 0 0 0 2px var(--accent);
+}
+
+/* ───────── seasons: accent palette while a season runs ───────── */
+:root[data-season='ramadan'],
+:root[data-season='eid-fitr'],
+:root[data-season='eid-adha'] {
+  --season-a: #3b2a7a;
+  --season-b: #c99a2e;
+}
+:root[data-season='founding'] {
+  --season-a: #7a4a24;
+  --season-b: #c08a4a;
+}
+:root[data-season='national'] {
+  --season-a: #0b6b3a;
+  --season-b: #1f9d6b;
+}
+:root[data-season] .app::before {
+  content: '';
+  position: fixed;
+  inset: 0 0 auto;
+  height: 4px;
+  z-index: 50;
+  background: linear-gradient(90deg, var(--season-a), var(--season-b), var(--season-a));
+  pointer-events: none;
+}
+
+/* ───────── result sheet: distributions ───────── */
+.dist {
+  margin: 12px 0 4px;
+  padding: 12px 14px;
+  border-radius: var(--r-lg);
+  background: var(--surface-2);
+}
+.dist__title {
+  font-weight: 700;
+  font-size: 14px;
+}
+.dist__note {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 700;
+  margin-top: 2px;
+}
+.dist__bars {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 6px;
+  margin-top: 10px;
+  direction: ltr;
+}
+.dist__col {
+  display: grid;
+  justify-items: center;
+  gap: 3px;
+}
+.dist__track {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: flex-end;
+}
+.dist__fill {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px 6px 2px 2px;
+  background: var(--line-strong);
+  transform-origin: 50% 100%;
+}
+.dist__col.is-mine .dist__fill {
+  background: var(--correct);
+}
+.dist__n {
+  font-size: 11px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.dist__k {
+  font-size: 12px;
+  font-weight: 700;
+}
+.learn__root {
+  letter-spacing: 0.3em;
+  font-weight: 700;
+}
+
+/* ───────── share card ───────── */
+.share-card {
+  display: grid;
+  place-items: center;
+}
+.share-card img,
+.share-card__ph {
+  width: min(100%, 300px);
+  aspect-ratio: 1080 / 1350;
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-md);
+}
+.share-card__ph {
+  background: linear-gradient(110deg, var(--surface-2) 30%, var(--line) 50%, var(--surface-2) 70%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* ───────── speed mode ───────── */
+.speed-clock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 4px 2px;
+}
+.speed-clock__time {
+  font-weight: 800;
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+  min-width: 52px;
+}
+.speed-clock__bar {
+  flex: 1;
+  height: 8px;
+  border-radius: 99px;
+  background: var(--line);
+  overflow: hidden;
+}
+.speed-clock__bar i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--present), var(--correct));
+  transform-origin: 0 50%;
+  transition: transform 250ms linear;
+}
+[dir='rtl'] .speed-clock__bar i {
+  transform-origin: 100% 50%;
+}
+.speed-clock.is-low .speed-clock__time {
+  color: var(--danger);
+}
+.speed-clock.is-low .speed-clock__bar i {
+  background: var(--danger);
+}
+.speed-clock__score {
+  font-weight: 800;
+}
+.speed-score {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1;
+}
+.speed-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 6px;
+}
+.speed-word {
+  padding: 3px 10px;
+  border-radius: var(--r-pill);
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: line-through;
+}
+.speed-word.is-won {
+  background: color-mix(in srgb, var(--correct) 18%, transparent);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* ───────── tutorial coach ───────── */
+.coach {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 4px 0;
+  padding: 10px 12px;
+  border-radius: var(--r-lg);
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.coach__av {
+  font-size: 24px;
+  line-height: 1;
+}
+.coach__body {
+  display: grid;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.coach__line--correct::before,
+.coach__line--present::before,
+.coach__line--absent::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  margin-inline-end: 6px;
+  vertical-align: -1px;
+}
+.coach__line--correct::before {
+  background: var(--correct);
+}
+.coach__line--present::before {
+  background: var(--present);
+}
+.coach__line--absent::before {
+  background: var(--absent);
+}
+
+/* ───────── league ───────── */
+.league-hero {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow-sm), inset 0 0 0 2px color-mix(in srgb, var(--tier) 55%, transparent);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--tier) 16%, var(--surface)), var(--surface));
+}
+.league-hero__icon {
+  font-size: 36px;
+  line-height: 1;
+}
+.league-hero__tier {
+  display: block;
+  font-weight: 800;
+  font-size: 17px;
+}
+.league-hero__ends {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.league-hero__pts {
+  display: grid;
+  justify-items: center;
+}
+.league-hero__pts b {
+  font-size: 28px;
+  line-height: 1;
+}
+.league-hero__pts small {
+  font-size: 11px;
+  color: var(--muted);
+}
+.league-last {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 600;
+}
+.league-last.is-up {
+  box-shadow: var(--shadow-sm), inset 0 0 0 2px var(--correct);
+}
+.league-last.is-down {
+  box-shadow: var(--shadow-sm), inset 0 0 0 2px var(--danger);
+}
+.lb {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm), inset 0 0 0 1px var(--line);
+}
+.lb__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--r-md);
+}
+.lb__row + .lb__row {
+  margin-top: 2px;
+}
+.lb__row.zone-up {
+  background: color-mix(in srgb, var(--correct) 9%, transparent);
+}
+.lb__row.zone-down {
+  background: color-mix(in srgb, var(--danger) 8%, transparent);
+}
+.lb__row.is-me {
+  box-shadow: inset 0 0 0 2px var(--accent);
+}
+.lb__rank {
+  width: 24px;
+  text-align: center;
+  font-weight: 800;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.lb__av {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+  flex: none;
+}
+.lb__name {
+  flex: 1;
+  min-width: 0;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lb__name small {
+  color: var(--muted);
+  font-weight: 600;
+}
+.lb__pts {
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.lb-legend {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.lb-legend .zone-up {
+  color: var(--correct);
+}
+.lb-legend .zone-down {
+  color: var(--danger);
+}
+
+/* ───────── archive ───────── */
+.archive {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.archive__day {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm), inset 0 0 0 1px var(--line);
+}
+.archive__num {
+  font-weight: 800;
+  color: var(--muted);
+  min-width: 34px;
+}
+.archive__date {
+  display: block;
+  font-weight: 700;
+}
+.archive__st {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+}
+.archive__day.is-won .archive__st {
+  color: var(--correct);
+  font-weight: 700;
+}
+.archive__day.is-lost .archive__st {
+  color: var(--danger);
+}
+
+/* ───────── packs ───────── */
+.packs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.pack {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  padding: 18px 10px 14px;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm), inset 0 0 0 1px var(--line);
+  color: var(--ink);
+}
+.pack.is-locked {
+  opacity: 0.6;
+}
+.pack.is-seasonal {
+  box-shadow: var(--shadow-sm), inset 0 0 0 2px var(--season-b, var(--gold));
+}
+.pack__tag {
+  position: absolute;
+  top: 8px;
+  inset-inline-start: 8px;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 1px 7px;
+  border-radius: var(--r-pill);
+  background: var(--season-b, var(--gold));
+  color: #fff;
+}
+.pack__icon {
+  font-size: 34px;
+  line-height: 1.1;
+}
+.pack__name {
+  font-weight: 800;
+}
+.pack__bar {
+  width: 80%;
+  height: 6px;
+  border-radius: 99px;
+  background: var(--line);
+  overflow: hidden;
+}
+.pack__bar i {
+  display: block;
+  height: 100%;
+  background: var(--correct);
+  transform-origin: 0 50%;
+}
+[dir='rtl'] .pack__bar i {
+  transform-origin: 100% 50%;
+}
+.pack__meta {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+@media (max-width: 360px) {
+  .modes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* tutorial coach / speed clock take vertical space: shrink the tiles to keep everything on screen */
+.game--coach .board {
+  --tile: min(56px, calc((min(100vw, 520px) - 40px) / (var(--cols, 5) + 0.4) - var(--gap)), calc((100dvh - 470px) / var(--rows, 6) - var(--gap)));
+}
+.game--speed .board {
+  --tile: min(62px, calc((min(100vw, 520px) - 40px) / (var(--cols, 5) + 0.4) - var(--gap)), calc((100dvh - 420px) / var(--rows, 6) - var(--gap)));
+}
+.coach {
+  padding: 8px 10px;
+}
+.coach__body {
+  font-size: 13px;
+  gap: 2px;
+}

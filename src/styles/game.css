@@ -1,0 +1,373 @@
+/* ───────── Game screen layout ───────── */
+.game {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+.game__top {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  min-height: 48px;
+}
+.game__meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.2;
+}
+.game__mode {
+  font-weight: 700;
+  font-size: var(--fs-md);
+  letter-spacing: 0.02em;
+}
+.game__sub {
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.attempts {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin: 6px 0 2px;
+}
+.attempts__dot {
+  width: 18px;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--line-strong);
+  transition: background var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-spring);
+}
+.attempts__dot--used {
+  background: var(--ink-2);
+  transform: scaleX(0.6);
+}
+.game__board-wrap {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--s-2) 0;
+}
+.game__help {
+  text-align: center;
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.hint-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 6px;
+  min-height: 0;
+}
+.hint-chip {
+  font-size: var(--fs-xs);
+  padding: 5px 10px;
+  border-radius: var(--r-pill);
+  background: var(--accent-soft);
+  color: var(--ink);
+  max-width: 100%;
+}
+.hint-chip b {
+  color: var(--accent);
+}
+
+/* ───────── Board ───────── */
+.board {
+  --gap: 6px;
+  --tile: min(62px, calc((min(100vw, 520px) - 40px) / (var(--cols, 5) + 0.4) - var(--gap)), calc((100dvh - 380px) / var(--rows, 6) - var(--gap)));
+  display: grid;
+  gap: var(--gap);
+  user-select: none;
+  -webkit-user-select: none;
+}
+.board__row {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 5), var(--tile));
+  gap: var(--gap);
+}
+.tile {
+  --tile-final: var(--absent);
+  position: relative;
+  width: var(--tile);
+  height: var(--tile);
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-sm);
+  font-weight: 700;
+  font-size: calc(var(--tile) * 0.5);
+  line-height: 1;
+  color: var(--tile-ink);
+  background: var(--tile-empty);
+  box-shadow: inset 0 0 0 2px var(--tile-border);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+.tile--filled {
+  box-shadow: inset 0 0 0 2px var(--tile-border-filled);
+}
+.tile--pop {
+  animation: tile-pop 140ms var(--ease-out);
+}
+@keyframes tile-pop {
+  0% {
+    transform: scale(0.82);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.tile--correct {
+  --tile-final: var(--correct);
+}
+.tile--present {
+  --tile-final: var(--present);
+}
+.tile--absent {
+  --tile-final: var(--absent);
+}
+.tile--settled {
+  background: var(--tile-final);
+  color: var(--result-ink);
+  box-shadow: none;
+}
+/* The flip: first half shows the typed tile, colour swaps at 90°, second half reveals. */
+.tile--revealing {
+  animation: tile-flip var(--flip-dur) var(--ease-flip) both;
+  animation-delay: calc(var(--i) * var(--flip-stagger));
+}
+@keyframes tile-flip {
+  0% {
+    transform: rotateX(0deg);
+    background: var(--tile-empty);
+    color: var(--tile-ink);
+    box-shadow: inset 0 0 0 2px var(--tile-border-filled);
+  }
+  49.9% {
+    transform: rotateX(90deg);
+    background: var(--tile-empty);
+    color: var(--tile-ink);
+    box-shadow: inset 0 0 0 2px var(--tile-border-filled);
+  }
+  50% {
+    transform: rotateX(90deg);
+    background: var(--tile-final);
+    color: var(--result-ink);
+    box-shadow: none;
+  }
+  100% {
+    transform: rotateX(0deg);
+    background: var(--tile-final);
+    color: var(--result-ink);
+    box-shadow: none;
+  }
+}
+.tile--bounce {
+  animation: tile-bounce 620ms var(--ease-out) both;
+  animation-delay: calc(var(--i) * 90ms);
+}
+@keyframes tile-bounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  35% {
+    transform: translateY(-34%) scale(1.04);
+  }
+  60% {
+    transform: translateY(4%) scale(0.98);
+  }
+  80% {
+    transform: translateY(-6%);
+  }
+}
+.tile--hinted {
+  box-shadow: inset 0 0 0 2px var(--accent);
+  color: var(--accent);
+  opacity: 0.65;
+}
+/* Non-colour markers (accessibility): bar = correct, dot = present */
+.tile__mark {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--dur-base) 0.2s;
+}
+.tile--settled .tile__mark,
+.tile--revealing .tile__mark {
+  opacity: 0.7;
+}
+.tile--correct .tile__mark {
+  bottom: 12%;
+  width: 34%;
+  height: 3px;
+  border-radius: 3px;
+  background: currentColor;
+}
+.tile--present .tile__mark {
+  top: 10%;
+  inset-inline-end: 10%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.tile--absent .tile__mark {
+  display: none;
+}
+:root[data-motion='reduced'] .tile--pop,
+:root[data-motion='reduced'] .tile--bounce {
+  animation: none;
+}
+
+/* ───────── Keyboard ───────── */
+.kb {
+  --key-h: clamp(46px, 7.4dvh, 58px);
+  --key-gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 4px 0 2px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.kb__row {
+  display: flex;
+  gap: var(--key-gap);
+  justify-content: center;
+}
+.key {
+  flex: 1 1 0;
+  min-width: 0;
+  height: var(--key-h);
+  max-width: 48px;
+  border-radius: 9px;
+  background: var(--key-bg);
+  color: var(--key-ink);
+  font-weight: 600;
+  font-size: clamp(14px, 4.3vw, 19px);
+  display: grid;
+  place-items: center;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.08);
+  transition: background-color 360ms var(--ease-out), color 360ms var(--ease-out), opacity 420ms var(--ease-out),
+    transform 420ms var(--ease-out), box-shadow 360ms;
+  transform-origin: 50% 80%;
+}
+.kb[data-lang='ar'] .key {
+  font-size: clamp(15px, 4.6vw, 20px);
+}
+.key--wide {
+  flex: 1.55 1 0;
+  max-width: 76px;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.04em;
+}
+.kb[data-lang='ar'] .key--wide {
+  max-width: 160px;
+  flex: 1 1 0;
+  font-size: var(--fs-sm);
+}
+.key svg {
+  width: 22px;
+  height: 22px;
+}
+.key--correct {
+  background: var(--correct);
+  color: var(--result-ink);
+  box-shadow: none;
+}
+.key--present {
+  background: var(--present);
+  color: var(--result-ink);
+  box-shadow: none;
+}
+.key--absent {
+  background: var(--absent);
+  color: var(--result-ink);
+  box-shadow: none;
+  opacity: 0.85;
+}
+/* EASY: eliminated letters gently dissolve but keep their slot (no layout jump). */
+.key--disabled {
+  background: transparent;
+  color: var(--muted);
+  opacity: 0.18;
+  transform: scale(0.82);
+  box-shadow: inset 0 0 0 1px var(--line);
+  cursor: default;
+}
+
+/* ───────── Learning card ───────── */
+.learn {
+  margin-top: var(--s-4);
+  padding: var(--s-4);
+  border-radius: var(--r-lg);
+  background: var(--surface-2);
+  box-shadow: inset 0 0 0 1px var(--line);
+  perspective: 600px;
+}
+.learn__eyebrow {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--s-3);
+}
+.learn__word {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: var(--s-3);
+}
+.learn__letter {
+  width: 40px;
+  height: 44px;
+  border-radius: var(--r-sm);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 22px;
+  background: var(--correct);
+  color: var(--result-ink);
+}
+.learn__display {
+  text-align: center;
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  margin-bottom: var(--s-3);
+}
+.learn__rows {
+  display: grid;
+  gap: var(--s-3);
+}
+.learn__label {
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.learn__value {
+  font-size: var(--fs-md);
+  line-height: 1.6;
+}
+.learn__value--pron {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+}
+.learn__example {
+  font-style: italic;
+  color: var(--ink-2);
+}

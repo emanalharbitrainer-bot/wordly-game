@@ -1,0 +1,31 @@
+# Classical/literary Arabic words that are absent from the subtitle-based frequency corpus
+# but were reviewed by hand as standard dictionary vocabulary (فصحى). Used as an extra
+# reference for the curated answers only.
+ريحان
+قرنفل
+بنفسج
+مروءة
+فصاحة
+خاطرة
+سرمدي
+مخطوط
+كافور
+زبرجد
+قرطاس
+محبرة
+قنطرة
+مشكاة
+جلمود
+# WORDLY 3.0 packs — reviewed real words / proper names missing from the frequency list
+كنافة
+تبولة
+نجران
+جازان
+بريدة
+عنيزة
+درعية
+سنابل
+عيدية
+عرفات
+إحرام
+عراقة

@@ -1,0 +1,143 @@
+/* ───────────── WORDLY design tokens ─────────────
+   Typography · color · spacing · radius · shadow · motion.
+   Components only ever reference these variables.                       */
+:root {
+  /* type */
+  --font-ui: 'Readex Pro', 'IBM Plex Sans Arabic', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.5rem;
+
+  /* spacing (4px grid) */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+
+  /* radius */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 26px;
+  --r-pill: 999px;
+
+  /* motion — shared by CSS and src/styles/motion.ts */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-flip: cubic-bezier(0.45, 0, 0.25, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 120ms;
+  --dur-base: 220ms;
+  --dur-slow: 380ms;
+  --flip-dur: 520ms;
+  --flip-stagger: 260ms;
+
+  /* palette — light */
+  --bg: #f4f1ea;
+  --bg-glow: radial-gradient(120% 80% at 50% -10%, #fbf9f4 0%, #f4f1ea 55%, #ece7dc 100%);
+  --surface: #ffffff;
+  --surface-2: #f8f6f1;
+  --ink: #1a1c20;
+  --ink-2: #4a4e56;
+  --muted: #7b7f87;
+  --line: #e2ddd1;
+  --line-strong: #c9c2b3;
+  --accent: #1f7a5a;
+  --accent-ink: #ffffff;
+  --accent-soft: #e2efe9;
+  --danger: #c2453a;
+  --gold: #d29b1f;
+
+  --tile-empty: transparent;
+  --tile-border: #d6d0c3;
+  --tile-border-filled: #8e887b;
+  --tile-ink: #1a1c20;
+
+  --correct: #2f9e6e;
+  --present: #d9a62e;
+  --absent: #878c95;
+  --result-ink: #ffffff;
+
+  --key-bg: #e4dfd4;
+  --key-ink: #1a1c20;
+
+  --shadow-sm: 0 1px 2px rgba(30, 25, 10, 0.06), 0 1px 1px rgba(30, 25, 10, 0.04);
+  --shadow-md: 0 6px 18px -6px rgba(40, 32, 10, 0.18), 0 2px 6px rgba(40, 32, 10, 0.06);
+  --shadow-lg: 0 24px 60px -18px rgba(30, 24, 8, 0.35);
+  --scrim: rgba(22, 20, 14, 0.38);
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #111214;
+    --bg-glow: radial-gradient(120% 80% at 50% -10%, #1b1d21 0%, #111214 60%, #0c0d0f 100%);
+    --surface: #1b1c20;
+    --surface-2: #222328;
+    --ink: #f1eee7;
+    --ink-2: #c4c1ba;
+    --muted: #8d8f95;
+    --line: #2d2f35;
+    --line-strong: #3e4047;
+    --accent: #3fb489;
+    --accent-ink: #0d1411;
+    --accent-soft: #1b2e27;
+    --tile-border: #34363d;
+    --tile-border-filled: #6c6f78;
+    --tile-ink: #f1eee7;
+    --absent: #3a3d44;
+    --key-bg: #2c2e34;
+    --key-ink: #f1eee7;
+    --shadow-md: 0 6px 18px -6px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 24px 60px -18px rgba(0, 0, 0, 0.75);
+    --scrim: rgba(0, 0, 0, 0.55);
+    color-scheme: dark;
+  }
+}
+:root[data-theme='dark'] {
+  --bg: #111214;
+  --bg-glow: radial-gradient(120% 80% at 50% -10%, #1b1d21 0%, #111214 60%, #0c0d0f 100%);
+  --surface: #1b1c20;
+  --surface-2: #222328;
+  --ink: #f1eee7;
+  --ink-2: #c4c1ba;
+  --muted: #8d8f95;
+  --line: #2d2f35;
+  --line-strong: #3e4047;
+  --accent: #3fb489;
+  --accent-ink: #0d1411;
+  --accent-soft: #1b2e27;
+  --tile-border: #34363d;
+  --tile-border-filled: #6c6f78;
+  --tile-ink: #f1eee7;
+  --absent: #3a3d44;
+  --key-bg: #2c2e34;
+  --key-ink: #f1eee7;
+  --shadow-md: 0 6px 18px -6px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 24px 60px -18px rgba(0, 0, 0, 0.75);
+  --scrim: rgba(0, 0, 0, 0.55);
+  color-scheme: dark;
+}
+
+/* Color-blind friendly palette (orange / blue) */
+:root[data-contrast='high'] {
+  --correct: #e8702a;
+  --present: #3d8fd6;
+}
+
+/* Reduced motion — collapses every CSS-driven duration */
+:root[data-motion='reduced'] {
+  --dur-fast: 1ms;
+  --dur-base: 1ms;
+  --dur-slow: 1ms;
+  --flip-dur: 1ms;
+  --flip-stagger: 0ms;
+}

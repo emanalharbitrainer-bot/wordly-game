@@ -1,0 +1,185 @@
+# word	level	category	meaning
+# Curated by hand for WORDLY. Every word is cross-checked by scripts/build_dictionaries.py
+# against SCOWL (wordlist-english) before it is published. Levels: easy | normal | hard | expert | daily
+# "daily" words are never shipped to the browser — they are seeded into Supabase only.
+apple	easy	Food	A round fruit with red or green skin
+house	easy	Places	A building where a family lives
+water	easy	Nature	The clear liquid in rivers and rain
+bread	easy	Food	A baked food made from flour and yeast
+chair	easy	Home	A seat with a back for one person
+table	easy	Home	Furniture with a flat top and legs
+plant	easy	Nature	A living thing that grows in soil
+train	easy	Transport	Carriages pulled along a railway
+music	easy	Arts	Sounds arranged to be pleasing
+smile	easy	Feelings	A happy expression on the face
+beach	easy	Places	Sandy land beside the sea
+cloud	easy	Nature	White or grey mass floating in the sky
+light	easy	Science	What makes it possible to see
+money	easy	Daily life	Coins and notes used to buy things
+river	easy	Nature	A large natural stream of water
+grass	easy	Nature	Green plants covering a lawn
+horse	easy	Animals	A large animal people ride
+mouse	easy	Animals	A small rodent with a long tail
+phone	easy	Technology	A device for calling people
+pizza	easy	Food	Flat baked dough topped with cheese
+sugar	easy	Food	A sweet white crystal used in cooking
+tiger	easy	Animals	A big striped wild cat
+green	easy	Colors	The color of fresh leaves
+happy	easy	Feelings	Feeling joy or pleasure
+heart	easy	Body	The organ that pumps blood
+lemon	easy	Food	A sour yellow citrus fruit
+ocean	easy	Nature	A very large body of salt water
+paper	easy	Daily life	Thin sheets you write on
+queen	easy	People	A female ruler of a kingdom
+sheep	easy	Animals	A woolly farm animal
+snake	easy	Animals	A long reptile with no legs
+store	easy	Places	A place where things are sold
+sweet	easy	Food	Tasting like sugar
+truck	easy	Transport	A large vehicle that carries goods
+watch	easy	Daily life	A small clock worn on the wrist
+whale	easy	Animals	The largest sea mammal
+world	easy	Places	The earth and everyone on it
+clock	easy	Home	A device that shows the time
+dream	easy	Feelings	Images in your mind while sleeping
+drink	easy	Food	To swallow a liquid
+earth	easy	Nature	The planet we live on
+fruit	easy	Food	The sweet part of a plant that holds seeds
+glass	easy	Home	A clear material used for windows
+juice	easy	Food	Liquid squeezed from fruit
+knife	easy	Home	A tool with a blade for cutting
+lunch	easy	Food	A meal eaten in the middle of the day
+party	easy	Daily life	A social gathering for fun
+peach	easy	Food	A soft fuzzy fruit with a stone
+plate	easy	Home	A flat dish for food
+salad	easy	Food	A mix of raw vegetables
+shirt	easy	Clothes	A piece of clothing for the upper body
+sleep	easy	Daily life	The natural rest of body and mind
+stone	easy	Nature	A small piece of rock
+toast	easy	Food	Bread browned by heat
+angle	normal	Science	The space between two meeting lines
+badge	normal	Objects	A small sign worn to show identity
+blend	normal	Actions	To mix things together smoothly
+bloom	normal	Nature	A flower, or to produce flowers
+brick	normal	Objects	A clay block used for building
+cabin	normal	Places	A small wooden house
+canal	normal	Places	An artificial waterway
+cedar	normal	Nature	A tall evergreen tree with fragrant wood
+charm	normal	Qualities	The power of pleasing people
+coral	normal	Nature	Hard sea material formed by tiny animals
+crown	normal	Objects	A ring of gold worn by a king
+daisy	normal	Nature	A small white flower with a yellow center
+depth	normal	Science	How deep something is
+dough	normal	Food	Flour mixed with water before baking
+eagle	normal	Animals	A large powerful bird of prey
+fable	normal	Arts	A short story that teaches a lesson
+flame	normal	Nature	The bright burning part of a fire
+flock	normal	Animals	A group of birds or sheep
+frost	normal	Nature	Thin ice that forms on cold surfaces
+globe	normal	Objects	A spherical model of the earth
+grape	normal	Food	A small round fruit growing in bunches
+guide	normal	People	Someone who shows the way
+haven	normal	Places	A safe place of shelter
+honey	normal	Food	Sweet food made by bees
+ivory	normal	Colors	A creamy white color
+jewel	normal	Objects	A precious stone
+lodge	normal	Places	A small house in the countryside
+maple	normal	Nature	A tree whose sap makes syrup
+medal	normal	Objects	A metal disc given as an award
+motor	normal	Technology	A machine that produces motion
+novel	normal	Arts	A long written story
+olive	normal	Food	A small oily fruit from the Mediterranean
+orbit	normal	Science	The curved path around a planet or star
+pearl	normal	Objects	A shiny gem formed inside an oyster
+prism	normal	Science	Glass that splits light into colors
+quilt	normal	Home	A warm padded bed cover
+radar	normal	Technology	A system that detects objects with radio waves
+ranch	normal	Places	A large farm for cattle
+robin	normal	Animals	A small bird with a red breast
+scale	normal	Objects	A device for weighing
+scout	normal	People	Someone sent ahead to gather information
+shelf	normal	Home	A flat board for holding things
+spice	normal	Food	A seasoning that adds flavor
+storm	normal	Nature	Violent weather with wind and rain
+sword	normal	Objects	A long bladed weapon
+thorn	normal	Nature	A sharp point on a plant stem
+trail	normal	Places	A path through the countryside
+vivid	normal	Qualities	Very bright and clear
+wheat	normal	Food	A grain used to make flour
+abyss	hard	Nature	A deep and seemingly bottomless chasm
+alloy	hard	Science	A metal made by mixing metals
+aloft	hard	Positions	Up in the air
+amber	hard	Colors	A warm yellow-orange fossil resin
+askew	hard	Positions	Not straight; crooked
+banal	hard	Qualities	So ordinary it is boring
+bayou	hard	Nature	A slow marshy stream
+cadet	hard	People	A young trainee officer
+cynic	hard	People	One who doubts people's motives
+deity	hard	Beliefs	A god or goddess
+dwarf	hard	People	Something much smaller than usual
+epoch	hard	Time	A distinct period in history
+ethos	hard	Ideas	The guiding beliefs of a community
+fjord	hard	Nature	A narrow sea inlet between cliffs
+gaudy	hard	Qualities	Too bright and showy
+glyph	hard	Writing	A carved symbol or character
+gnome	hard	Folklore	A small mythical earth spirit
+havoc	hard	Events	Great destruction or chaos
+heist	hard	Events	A robbery, especially a bold one
+inept	hard	Qualities	Lacking skill
+irony	hard	Language	Saying the opposite of what you mean
+jaunt	hard	Travel	A short pleasure trip
+knack	hard	Abilities	A special skill or talent
+lapse	hard	Events	A brief failure or slip
+lucid	hard	Qualities	Clear and easy to understand
+mirth	hard	Feelings	Laughter and amusement
+nadir	hard	Positions	The lowest point
+nymph	hard	Folklore	A mythical spirit of nature
+oasis	hard	Places	A fertile spot in a desert
+plume	hard	Nature	A large feather
+quail	hard	Animals	A small plump game bird
+revel	hard	Actions	To celebrate noisily
+rogue	hard	People	A dishonest but likable person
+sinew	hard	Body	A tough tendon
+stoic	hard	Qualities	Enduring pain without complaint
+tacit	hard	Qualities	Understood without being said
+tryst	hard	Events	A secret meeting
+usurp	hard	Actions	To take power wrongfully
+vigil	hard	Events	A period of staying awake to watch
+wrath	hard	Feelings	Extreme anger
+aphid	expert	Animals	A tiny insect that sucks plant sap
+axiom	expert	Ideas	A statement accepted as true
+chasm	expert	Nature	A deep crack in the earth
+crypt	expert	Places	An underground burial room
+cumin	expert	Food	A spice made from aromatic seeds
+dross	expert	Objects	Waste matter; rubbish
+egret	expert	Animals	A white wading bird
+ennui	expert	Feelings	Weary boredom
+fugue	expert	Arts	A musical piece with interwoven melodies
+gaffe	expert	Events	An embarrassing social mistake
+gecko	expert	Animals	A small lizard that climbs walls
+ghoul	expert	Folklore	An evil spirit in legends
+hydra	expert	Folklore	A many-headed mythical serpent
+inane	expert	Qualities	Silly and pointless
+kiosk	expert	Places	A small booth selling things
+knoll	expert	Nature	A small rounded hill
+lathe	expert	Technology	A machine that shapes spinning material
+lymph	expert	Body	A clear fluid of the immune system
+mauve	expert	Colors	A pale purple color
+motif	expert	Arts	A recurring theme or pattern
+nexus	expert	Ideas	A central connection point
+pique	expert	Feelings	Irritation from hurt pride
+quash	expert	Actions	To reject or suppress firmly
+quell	expert	Actions	To put an end to
+sylph	expert	Folklore	A slender air spirit
+tawny	expert	Colors	An orange-brown color
+thyme	expert	Food	A small aromatic herb
+wield	expert	Actions	To hold and use a tool or power
+xenon	expert	Science	A heavy noble gas
+yacht	expert	Transport	A sailing boat for pleasure
+brine	expert	Food	Salty water used for pickling
+quirk	expert	Qualities	A peculiar habit
+whelp	expert	Animals	A young puppy or cub
+vouch	expert	Actions	To confirm as true
+pithy	expert	Language	Short and full of meaning
+gusto	expert	Feelings	Great enjoyment
+foyer	expert	Places	An entrance hall
+dirge	expert	Arts	A mournful song

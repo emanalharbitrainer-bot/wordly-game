@@ -1,0 +1,391 @@
+@import './tokens/tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-family: var(--font-ui);
+  background: var(--bg);
+  background-image: var(--bg-glow);
+  background-attachment: fixed;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+  touch-action: manipulation;
+}
+button {
+  font: inherit;
+  color: inherit;
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+svg {
+  width: 1.3em;
+  height: 1.3em;
+  flex: none;
+}
+.menu-tile svg {
+  width: 24px;
+  height: 24px;
+}
+.choice__badge svg {
+  width: 26px;
+  height: 26px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ───────── App shell ───────── */
+.app {
+  position: relative;
+  height: 100dvh;
+  max-width: 520px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: max(env(safe-area-inset-top), 12px) 16px max(env(safe-area-inset-bottom), 12px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  will-change: transform, opacity;
+}
+.screen--game {
+  overflow: hidden;
+  padding-inline: 8px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  min-height: 48px;
+  margin-bottom: var(--s-3);
+}
+.header__title {
+  flex: 1;
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.header__sub {
+  color: var(--muted);
+  font-size: var(--fs-sm);
+}
+.icon-btn {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-md);
+  color: var(--ink-2);
+  transition: background var(--dur-base) var(--ease-out), color var(--dur-base);
+}
+.icon-btn:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+.icon-btn svg {
+  width: 22px;
+  height: 22px;
+}
+[dir='rtl'] .flip-rtl {
+  transform: scaleX(-1);
+}
+
+/* ───────── Buttons ───────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  min-height: 52px;
+  padding: 0 var(--s-6);
+  border-radius: var(--r-lg);
+  font-weight: 600;
+  font-size: var(--fs-md);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-sm), inset 0 0 0 1px var(--line);
+  transition: background var(--dur-base), box-shadow var(--dur-base);
+}
+.btn svg {
+  width: 20px;
+  height: 20px;
+}
+.btn--primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: 0 10px 24px -10px color-mix(in srgb, var(--accent) 70%, transparent), inset 0 -2px 0 rgba(0, 0, 0, 0.12);
+}
+.btn--ghost {
+  background: transparent;
+  box-shadow: none;
+  color: var(--ink-2);
+}
+.btn--block {
+  width: 100%;
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ───────── Cards & lists ───────── */
+.card {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm), inset 0 0 0 1px var(--line);
+  padding: var(--s-4);
+}
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+.choice {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  width: 100%;
+  text-align: start;
+  padding: var(--s-4);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm), inset 0 0 0 1px var(--line);
+  transition: box-shadow var(--dur-base) var(--ease-out);
+}
+.choice[aria-pressed='true'] {
+  box-shadow: var(--shadow-md), inset 0 0 0 2px var(--accent);
+}
+.choice__badge {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--r-md);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: var(--fs-lg);
+  color: #fff;
+}
+.choice__body {
+  flex: 1;
+  min-width: 0;
+}
+.choice__title {
+  font-weight: 600;
+  font-size: var(--fs-md);
+}
+.choice__desc {
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  margin-top: 2px;
+  line-height: 1.5;
+}
+.choice__meta {
+  color: var(--ink-2);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  background: var(--surface-2);
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+  white-space: nowrap;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--line);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--ink-2);
+}
+.pill svg {
+  width: 16px;
+  height: 16px;
+}
+.coin {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ffe28a, var(--gold) 70%);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ───────── Toasts ───────── */
+.toast-layer {
+  position: absolute;
+  inset-inline: 0;
+  top: 64px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 60;
+}
+.toast {
+  padding: 10px 18px;
+  border-radius: var(--r-md);
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  box-shadow: var(--shadow-md);
+}
+.ach-toast {
+  position: absolute;
+  top: 12px;
+  inset-inline: 16px;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-3) var(--s-4);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-lg), inset 0 0 0 1px var(--line);
+  overflow: hidden;
+}
+.ach-toast__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-md);
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #f7d774, var(--gold));
+  color: #4a3200;
+  font-weight: 800;
+}
+.ach-toast__shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, 0.55) 50%, transparent 70%);
+  transform: translateX(-100%);
+  animation: shine 1.4s var(--ease-out) 0.3s both;
+}
+@keyframes shine {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* ───────── Sheets / modals ───────── */
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: var(--scrim);
+  z-index: 40;
+}
+.sheet {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 50;
+  max-height: 88dvh;
+  overflow-y: auto;
+  background: var(--surface);
+  border-radius: var(--r-xl) var(--r-xl) 0 0;
+  box-shadow: var(--shadow-lg);
+  padding: var(--s-3) var(--s-5) max(env(safe-area-inset-bottom), var(--s-5));
+}
+.sheet__grip {
+  width: 40px;
+  height: 5px;
+  border-radius: var(--r-pill);
+  background: var(--line-strong);
+  margin: 0 auto var(--s-4);
+}
+.sheet__title {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  margin: 0 0 var(--s-1);
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+.sheet__subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin: 0 0 var(--s-4);
+}
+
+/* ───────── Skeletons ───────── */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface-2);
+  border-radius: var(--r-md);
+}
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--surface) 75%, transparent), transparent);
+  animation: skeleton 1.3s var(--ease-in-out) infinite;
+}
+@keyframes skeleton {
+  to {
+    transform: translateX(100%);
+  }
+}
+:root[data-motion='reduced'] .skeleton::after {
+  animation: none;
+}
+
+.muted {
+  color: var(--muted);
+}
+.center {
+  text-align: center;
+}
+.grow {
+  flex: 1;
+}
+
+/* ───────── Lite effects (auto-detected slow devices) ───────── */
+:root[data-perf='lite'] .ftiles {
+  display: none;
+}
+:root[data-perf='lite'] .orb-core__aura,
+:root[data-perf='lite'] .flame__ember,
+:root[data-perf='lite'] .flame__ring,
+:root[data-perf='lite'] .flame__corona,
+:root[data-perf='lite'] .xpbar__shine,
+:root[data-perf='lite'] .prof-stat__shine,
+:root[data-perf='lite'] .mini-flame,
+:root[data-perf='lite'] .ai-panel__aurora,
+:root[data-perf='lite'] .choice--duel::after,
+:root[data-perf='lite'] .swords,
+:root[data-perf='lite'] .new-badge {
+  animation: none !important;
+}

@@ -1,0 +1,8 @@
+node_modules
+dist
+.vercel
+test-results
+.env
+.env.*
+supabase/seed_daily_words.sql
+public/dictionaries

@@ -1,0 +1,121 @@
+# pack	word (display)	category	meaning	pronunciation (vocalized Arabic / IPA)	example	translation	root (Arabic only)
+ar-kitchen	معمول	حلويات	كعك محشو بالتمر أو الفستق يقدم في الأعياد	مَعْمُول	قدمت جدتي المعمولَ مع القهوة.	date-filled cookie	ع م ل
+ar-kitchen	كنافة	حلويات	حلوى من عجين رفيع وجبن أو قشطة بالقطر	كُنَافَة	طلبنا الكنافةَ ساخنةً بعد العشاء.	kunafa (sweet pastry)	ك ن ف
+ar-kitchen	مضغوط	أطباق	أرز ولحم يطبخان في قدر الضغط	مَضْغُوط	غداء الجمعة مضغوطُ دجاجٍ لذيذ.	pressure-cooked rice dish	ض غ ط
+ar-kitchen	فلافل	أطباق	أقراص مقلية من الحمص أو الفول المطحون	فَلَافِل	اشتريت سندويشة فلافلٍ في الطريق.	falafel	معرّب
+ar-kitchen	تبولة	سلطات	سلطة من البقدونس والبرغل والطماطم	تَبُّولَة	زيّنت أمي التبولةَ بالليمون.	tabbouleh	ت ب ل
+ar-kitchen	عصيدة	أطباق	طعام شعبي من الدقيق المطبوخ بالماء والسمن	عَصِيدَة	العصيدةُ من أكلات الجنوب الشهيرة.	porridge (asida)	ع ص د
+ar-kitchen	فطائر	مخبوزات	عجين محشو يخبز في الفرن	فَطَائِر	خبزنا فطائرَ بالجبن للفطور.	pastries, pies	ف ط ر
+ar-kitchen	مشروب	مشروبات	كل ما يشرب من سوائل	مَشْرُوب	الماءُ أفضل مشروبٍ في الصيف.	drink, beverage	ش ر ب
+ar-kitchen	كمثرى	فواكه	فاكهة حلوة على شكل جرس	كُمَّثْرَى	قطفنا الكمثرى من المزرعة.	pear	معرّب
+ar-kitchen	مانجو	فواكه	فاكهة استوائية صفراء حلوة	مَانْجُو	عصير المانجو بارد ومنعش.	mango	معرّب
+ar-kitchen	شطيرة	وجبات	خبز يحشى بالطعام ويؤكل باليد	شَطِيرَة	أخذت شطيرةً إلى المدرسة.	sandwich	ش ط ر
+ar-kitchen	بليلة	أطباق	حمص مسلوق بالكمون يباع في الأسواق	بَلِيلَة	البليلةُ وجبة خفيفة في ليالي جدة.	spiced boiled chickpeas	ب ل ل
+ar-cities	نجران	مدن	مدينة في جنوب المملكة تشتهر بالنخيل والآثار	نَجْرَان	زرنا قصر الإمارة في نجران.	Najran	ن ج ر
+ar-cities	جازان	مدن	مدينة ساحلية في جنوب غرب المملكة	جَازَان	مانجو جازان مشهور في كل مكان.	Jazan	معرّب
+ar-cities	بريدة	مدن	عاصمة منطقة القصيم وسوق التمور الأشهر	بُرَيْدَة	يقام مهرجان التمور في بريدة.	Buraydah	ب ر د
+ar-cities	عنيزة	مدن	مدينة في القصيم تعرف بباريس نجد	عُنَيْزَة	عنيزةُ مدينة الثقافة والنخيل.	Unaizah	ع ن ز
+ar-cities	درعية	معالم	موطن الدولة السعودية الأولى وفيها حي الطريف	دِرْعِيَّة	حي الطريف في الدرعية من التراث العالمي.	Diriyah	د ر ع
+ar-cities	بيروت	مدن	عاصمة لبنان على البحر المتوسط	بَيْرُوت	تطل بيروت على البحر المتوسط.	Beirut	معرّب
+ar-cities	بغداد	مدن	عاصمة العراق على نهر دجلة	بَغْدَاد	كانت بغداد عاصمةً للعلم قديمًا.	Baghdad	معرّب
+ar-cities	صنعاء	مدن	عاصمة اليمن ومدينة قديمة بعمارتها	صَنْعَاء	بيوت صنعاء القديمة مزخرفة.	Sanaa	ص ن ع
+ar-cities	باريس	مدن	عاصمة فرنسا وفيها برج إيفل	بَارِيس	صعدنا برج إيفل في باريس.	Paris	معرّب
+ar-cities	طوكيو	مدن	عاصمة اليابان وأكبر مدنها	طُوكْيُو	قطارات طوكيو سريعة ودقيقة.	Tokyo	معرّب
+ar-cities	مدريد	مدن	عاصمة إسبانيا	مَدْرِيد	زرنا متحف البرادو في مدريد.	Madrid	معرّب
+ar-cities	موسكو	مدن	عاصمة روسيا	مُوسْكُو	الشتاء في موسكو شديد البرودة.	Moscow	معرّب
+ar-sport	مضمار	ملاعب	ميدان السباق والجري	مِضْمَار	ركض العداء حول المضمار.	racetrack	ض م ر
+ar-sport	منتخب	فرق	فريق يمثل الدولة في المنافسات	مُنْتَخَب	فاز المنتخبُ في المباراة النهائية.	national team	ن خ ب
+ar-sport	تمرين	تدريب	نشاط بدني يتكرر لاكتساب المهارة	تَمْرِين	أبدأ يومي بتمرينٍ خفيف.	exercise, training	م ر ن
+ar-sport	لياقة	صحة	قدرة الجسم على الحركة والتحمل	لِيَاقَة	المشي يحسن اللياقةَ البدنية.	fitness	ل ي ق
+ar-sport	جمباز	رياضات	رياضة الحركات المرنة والقفز	جُمْبَاز	تتدرب أختي على الجمباز.	gymnastics	معرّب
+ar-sport	شطرنج	ألعاب	لعبة ذهنية على رقعة من 64 مربعًا	شِطْرَنْج	هزمت أبي في الشطرنج.	chess	معرّب
+ar-sport	مهاجم	لاعبون	لاعب مهمته تسجيل الأهداف	مُهَاجِم	سجل المهاجمُ هدفين.	striker, forward	ه ج م
+ar-sport	مدافع	لاعبون	لاعب يمنع الخصم من التسجيل	مُدَافِع	أنقذ المدافعُ الكرة من المرمى.	defender	د ف ع
+ar-sport	تعادل	نتائج	انتهاء المباراة بلا فائز	تَعَادُل	انتهت المباراة بالتعادل.	draw, tie	ع د ل
+ar-sport	رماية	رياضات	إصابة الهدف بالسهم أو البندقية	رِمَايَة	حصل على ذهبية الرماية.	shooting, archery	ر م ي
+ar-sport	جمهور	مشجعون	الناس الذين يشاهدون المباراة	جُمْهُور	هتف الجمهورُ للفريق.	crowd, audience	ج م ه ر
+ar-sport	صافرة	أدوات	أداة يطلق بها الحكم صوتًا	صَافِرَة	أطلق الحكم صافرةَ النهاية.	whistle	ص ف ر
+ar-nature	كثبان	صحراء	تلال من الرمال تصنعها الرياح	كُثْبَان	تتحرك الكثبانُ مع الرياح.	sand dunes	ك ث ب
+ar-nature	بادية	صحراء	الأرض الواسعة التي يسكنها البدو	بَادِيَة	قضينا الربيع في البادية.	open desert, badia	ب د و
+ar-nature	دلفين	بحر	حيوان بحري ذكي من الثدييات	دُلْفِين	قفز الدلفينُ فوق الموج.	dolphin	معرّب
+ar-nature	مجداف	بحر	عصا مسطحة يحرك بها القارب	مِجْدَاف	حرّك الصياد المجدافَ بقوة.	oar, paddle	ج د ف
+ar-nature	أمواج	بحر	ما يرتفع من ماء البحر ويتحرك	أَمْوَاج	تتكسر الأمواجُ على الشاطئ.	waves	م و ج
+ar-nature	ينبوع	ماء	ماء يخرج من الأرض	يَنْبُوع	شربنا من ينبوعٍ بارد.	spring (of water)	ن ب ع
+ar-nature	براري	بر	الأراضي الواسعة خارج المدن	بَرَارِي	ترعى الإبل في البراري.	wilderness	ب ر ر
+ar-nature	قافلة	صحراء	جماعة من المسافرين وإبلهم	قَافِلَة	سارت القافلةُ ليلًا.	caravan	ق ف ل
+ar-nature	شواطئ	بحر	حواف البحر الرملية	شَوَاطِئ	شواطئُ أملج صافية.	shores, beaches	ش ط ء
+ar-nature	إعصار	طقس	عاصفة دوارة شديدة	إِعْصَار	اقترب الإعصارُ من الساحل.	hurricane	ع ص ر
+ar-nature	غزلان	حيوانات	حيوانات رشيقة سريعة العدو	غِزْلَان	رأينا غزلانًا في المحمية.	gazelles	غ ز ل
+ar-nature	سنابل	نبات	ما يحمل حبوب القمح	سَنَابِل	تمايلت السنابلُ في الحقل.	ears of grain	س ن ب ل
+ar-ramadan	إفطار	رمضان	وجبة الصائم عند المغرب	إِفْطَار	اجتمعت العائلة على الإفطار.	iftar (fast-breaking meal)	ف ط ر
+ar-ramadan	عيدية	العيد	مال أو هدية تعطى للأطفال في العيد	عِيدِيَّة	فرح الأطفال بالعيدية.	Eid gift money	ع و د
+ar-ramadan	تكبير	العيد	قول «الله أكبر» في أيام العيد	تَكْبِير	علت أصوات التكبيرِ صباح العيد.	takbir (glorifying God)	ك ب ر
+ar-ramadan	تهنئة	العيد	كلام يعبر عن الفرح للآخرين	تَهْنِئَة	أرسلت تهنئةً بالعيد لأصدقائي.	congratulation	ه ن ء
+ar-ramadan	أضحية	العيد	ما يذبح من الأنعام في عيد الأضحى	أُضْحِيَّة	وزعنا لحم الأضحية على الجيران.	sacrifice (Eid al-Adha)	ض ح ي
+ar-ramadan	عرفات	الحج	الجبل الذي يقف عليه الحجاج	عَرَفَات	يقف الحجاج على صعيد عرفات.	Arafat	ع ر ف
+ar-ramadan	تلبية	الحج	قول الحاج «لبيك اللهم لبيك»	تَلْبِيَة	ارتفعت التلبيةُ في المشاعر.	talbiyah (pilgrim's call)	ل ب ي
+ar-ramadan	إحرام	الحج	نية الدخول في الحج أو العمرة ولباسه	إِحْرَام	لبس الحاج ملابس الإحرام.	ihram (pilgrim state)	ح ر م
+ar-ramadan	تلاوة	رمضان	قراءة القرآن بتأنٍّ	تِلَاوَة	يكثر الناس من التلاوة في رمضان.	recitation	ت ل و
+ar-ramadan	مسبحة	رمضان	خرز منظوم يعد به التسبيح	مِسْبَحَة	أهدى جدي مسبحةً جميلة.	prayer beads	س ب ح
+ar-ramadan	مائدة	رمضان	الطعام المعدّ على السفرة	مَائِدَة	امتلأت مائدةُ الإفطار بالخيرات.	dining table, spread	م ي د
+ar-ramadan	إمساك	رمضان	التوقف عن الطعام عند الفجر	إِمْسَاك	موعد الإمساك قبل الفجر.	start of the fast (imsak)	م س ك
+ar-national	مملكة	وطن	دولة يحكمها ملك	مَمْلَكَة	نحب مملكتَنا الغالية.	kingdom	م ل ك
+ar-national	تأسيس	وطن	بداية بناء الدولة أو الشيء	تَأْسِيس	نحتفل بيوم التأسيس في فبراير.	founding	ء س س
+ar-national	توحيد	وطن	جمع الأجزاء في كيان واحد	تَوْحِيد	تم توحيد المملكة عام 1932.	unification	و ح د
+ar-national	أجداد	وطن	الآباء الأولون	أَجْدَاد	نفخر بتاريخ الأجداد.	ancestors	ج د د
+ar-national	أصالة	قيم	الثبات على الجذور والتراث	أَصَالَة	في بيوت الطين أصالةٌ وجمال.	authenticity	ء ص ل
+ar-national	عراقة	قيم	قِدَم التاريخ ورسوخه	عَرَاقَة	للدرعية عراقةٌ تمتد قرونًا.	deep-rootedness, heritage	ع ر ق
+ar-national	خضراء	ألوان	لون الزرع وراية الوطن	خَضْرَاء	رفعنا الرايةَ الخضراءَ عاليًا.	green	خ ض ر
+ar-national	رايات	وطن	أعلام ترفع في المناسبات	رَايَات	زينت الراياتُ الشوارع.	banners, flags	ر ي ي
+ar-national	فرسان	تراث	راكبو الخيل الشجعان	فُرْسَان	استعرض الفرسانُ في المهرجان.	knights, horsemen	ف ر س
+ar-national	سامري	تراث	فن شعبي غنائي من نجد	سَامِرِي	غنت الفرقة لونَ السامري.	samri (folk art)	س م ر
+ar-national	موروث	تراث	ما ينتقل من جيل إلى جيل	مَوْرُوث	نحافظ على الموروثِ الشعبي.	heritage, legacy	و ر ث
+ar-national	شامخة	قيم	عالية مرتفعة بثبات	شَامِخَة	تقف الجبال شامخةً.	towering, proud	ش م خ
+en-kitchen	pasta	Food	Italian dough food such as spaghetti	/ˈpɑː.stə/	We had pasta with tomato sauce.	معكرونة
+en-kitchen	flour	Baking	Powder made by grinding grain	/flaʊər/	Mix the flour with water.	دقيق
+en-kitchen	onion	Vegetables	A round vegetable with a strong smell	/ˈʌn.jən/	Chopping an onion made me cry.	بصل
+en-kitchen	curry	Food	A spicy dish with sauce	/ˈkʌr.i/	The chicken curry was delicious.	كاري
+en-kitchen	mango	Fruit	A sweet tropical fruit	/ˈmæŋ.ɡoʊ/	This mango is very juicy.	مانجو
+en-kitchen	cocoa	Drinks	Powder from cacao beans; a hot drink	/ˈkoʊ.koʊ/	A cup of cocoa warms you up.	كاكاو
+en-kitchen	grill	Cooking	To cook food over direct heat	/ɡrɪl/	Dad likes to grill fish.	يشوي
+en-kitchen	whisk	Tools	A tool for beating eggs or cream	/wɪsk/	Use a whisk to beat the eggs.	مخفقة
+en-kitchen	broth	Food	Liquid in which food was cooked	/brɒθ/	Hot broth is good when you are sick.	مرق
+en-kitchen	syrup	Sweets	A thick sweet liquid	/ˈsɪr.əp/	Pour syrup over the pancakes.	شراب سكري
+en-kitchen	basil	Herbs	A fragrant green herb	/ˈbæz.əl/	Add fresh basil to the salad.	ريحان
+en-kitchen	dates	Fruit	Sweet brown fruit of the palm tree	/deɪts/	We break our fast with dates.	تمر
+en-cities	paris	Cities	The capital of France	/ˈpær.ɪs/	The Eiffel Tower is in Paris.	باريس
+en-cities	tokyo	Cities	The capital of Japan	/ˈtoʊ.ki.oʊ/	Tokyo has very fast trains.	طوكيو
+en-cities	cairo	Cities	The capital of Egypt	/ˈkaɪ.roʊ/	Cairo is close to the pyramids.	القاهرة
+en-cities	dubai	Cities	A city in the UAE with very tall towers	/duːˈbaɪ/	The tallest tower is in Dubai.	دبي
+en-cities	delhi	Cities	A large city in northern India	/ˈdɛl.i/	Delhi is busy and colorful.	دلهي
+en-cities	seoul	Cities	The capital of South Korea	/soʊl/	We ate street food in Seoul.	سيول
+en-cities	milan	Cities	A city in Italy known for fashion	/mɪˈlæn/	Milan is famous for design.	ميلانو
+en-cities	lagos	Cities	The largest city in Nigeria	/ˈleɪ.ɡɒs/	Lagos sits on the Atlantic coast.	لاغوس
+en-cities	osaka	Cities	A big port city in Japan	/oʊˈsɑː.kə/	Osaka is known for its food.	أوساكا
+en-cities	miami	Cities	A sunny city in Florida	/maɪˈæm.i/	Miami has warm beaches.	ميامي
+en-cities	dhaka	Cities	The capital of Bangladesh	/ˈdɑː.kə/	Dhaka is full of rickshaws.	دكا
+en-cities	hanoi	Cities	The capital of Vietnam	/hæˈnɔɪ/	Hanoi has many old lakes.	هانوي
+en-sports	relay	Races	A race run by a team in turns	/ˈriː.leɪ/	Our team won the relay.	سباق تتابع
+en-sports	rugby	Sports	A team game with an oval ball	/ˈrʌɡ.bi/	Rugby is a tough sport.	رغبي
+en-sports	skate	Sports	To glide on ice or wheels	/skeɪt/	She learned to skate this winter.	يتزلج
+en-sports	pitch	Places	A field where a game is played	/pɪtʃ/	The players ran onto the pitch.	ملعب
+en-sports	arena	Places	A large place for sports events	/əˈriː.nə/	The arena was full of fans.	ساحة
+en-sports	rally	Racing	A long car race on public roads	/ˈræl.i/	The Dakar Rally crosses the desert.	رالي
+en-sports	boxer	People	A person who fights in boxing	/ˈbɒk.sər/	The boxer trained every day.	ملاكم
+en-sports	racer	People	A person who takes part in races	/ˈreɪ.sər/	The racer crossed the line first.	متسابق
+en-sports	squad	Teams	A group of players in a team	/skwɒd/	The coach picked the squad.	تشكيلة الفريق
+en-sports	serve	Actions	To hit the ball to start a point	/sɜːrv/	It is your turn to serve.	إرسال
+en-sports	skier	People	A person who skis	/ˈskiː.ər/	The skier raced down the hill.	متزلج
+en-sports	kayak	Boats	A small narrow boat moved with a paddle	/ˈkaɪ.æk/	We paddled a kayak on the lake.	قارب كاياك
+en-space	comet	Space	An icy body with a glowing tail	/ˈkɒm.ɪt/	We saw a comet in the night sky.	مذنب
+en-space	lunar	Space	Relating to the moon	/ˈluː.nər/	The lunar calendar follows the moon.	قمري
+en-space	virus	Biology	A tiny germ that causes illness	/ˈvaɪ.rəs/	Wash your hands to stop the virus.	فيروس
+en-space	probe	Space	A spacecraft sent to explore	/proʊb/	The probe reached Mars.	مسبار
+en-space	rover	Space	A vehicle that explores another planet	/ˈroʊ.vər/	The rover drove across the crater.	مركبة جوالة
+en-space	ozone	Earth	A gas layer that protects the earth	/ˈoʊ.zoʊn/	The ozone layer blocks harmful rays.	أوزون
+en-space	magma	Earth	Hot melted rock under the ground	/ˈmæɡ.mə/	Magma rises inside a volcano.	صهارة
+en-space	quark	Physics	A tiny particle inside protons	/kwɔːrk/	A proton has three quarks.	كوارك
+en-space	atoms	Chemistry	The tiny units that make up matter	/ˈæt.əmz/	Water is made of atoms.	ذرات
+en-space	genes	Biology	Units in cells passed from parents	/dʒiːnz/	You got your eye color from your genes.	جينات
+en-space	helix	Biology	A spiral shape like DNA	/ˈhiː.lɪks/	DNA has a double helix shape.	لولب
+en-space	sonar	Technology	Finding objects with sound waves	/ˈsoʊ.nɑːr/	Ships use sonar to find fish.	سونار
